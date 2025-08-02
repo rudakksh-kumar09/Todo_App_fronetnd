@@ -6,7 +6,7 @@ services:
     staticPublishPath: ./build
     envVars:
       - key: NODE_VERSION
-        value: 18
+        value: "18"
       - key: REACT_APP_API_URL
         value: https://todo-app-rqn6.onrender.com/api
       - key: GENERATE_SOURCEMAP
