@@ -21,11 +21,18 @@ This React frontend is configured to deploy on Render.com and connect to your ba
 1. Create a new **Static Site** on Render
 2. Connect your GitHub repository
 3. Use these settings:
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm ci && npm run build` (or `npm install && npm run build`)
    - **Publish Directory**: `./build`
    - **Environment Variables**:
      - `REACT_APP_API_URL` = `https://todo-app-rqn6.onrender.com/api`
      - `GENERATE_SOURCEMAP` = `false`
+
+## Troubleshooting Build Issues:
+
+If you get "react-scripts: not found" error:
+1. Ensure `package-lock.json` is committed to your repository
+2. Try using `npm install` instead of `npm ci` in build command
+3. Check that all dependencies are listed in `package.json`
 
 ## Environment Variables:
 
