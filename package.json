@@ -18,7 +18,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:render": "npm install --production=false && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -176,34 +176,37 @@ The frontend communicates with the Flask backend through:
 npm run build
 ```
 
-### Deploy to Render (Recommended)
+### Deploy to Vercel (Recommended)
 
-This project is configured for easy deployment on Render.com:
+This project is optimized for Vercel deployment:
 
 1. **Push to GitHub**
-2. **Connect repository to Render**
-3. **Render will auto-detect configuration** from `render.yaml`
+2. **Go to [vercel.com](https://vercel.com)**
+3. **Import your repository**
+4. **Deploy automatically**
 
-Or manually create a Static Site with:
-- **Build Command**: `npm install && npm run build`
-- **Publish Directory**: `./build`
-- **Environment Variables**:
-  - `REACT_APP_API_URL=https://todo-app-rqn6.onrender.com/api`
-  - `GENERATE_SOURCEMAP=false`
+Vercel will auto-detect the configuration from `vercel.json`.
 
-See `RENDER_DEPLOYMENT.md` for detailed instructions.
+Alternative: Use Vercel CLI:
+```bash
+npm i -g vercel
+vercel
+```
 
-### Deploy to Netlify/Vercel
+See `VERCEL_DEPLOYMENT.md` for detailed instructions.
 
-1. Connect your GitHub repository
-2. Set build command: `npm run build`
-3. Set publish directory: `build`
-4. Configure environment variables in dashboard
+### Deploy to Other Platforms
+
+For Netlify, Surge, or other platforms:
+1. Build command: `npm run build`
+2. Publish directory: `build`
+3. Add environment variable: `REACT_APP_API_URL=https://todo-app-rqn6.onrender.com/api`
 
 ### Environment Variables for Production
 
 - `REACT_APP_API_URL` - Your backend API URL (configured for https://todo-app-rqn6.onrender.com/api)
 - `REACT_APP_GOOGLE_CLIENT_ID` - Google OAuth client ID
+- `CI=false` - Prevents build warnings from failing deployment
 
 ## Customization
 
